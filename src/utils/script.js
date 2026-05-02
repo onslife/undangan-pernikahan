@@ -3,7 +3,7 @@ const openInvitationButton = document.querySelector("#openInvitation");
 const musicButton = document.querySelector("#musicButton");
 const weddingMusic = document.querySelector("#weddingMusic");
 
-const weddingDate = new Date("2026-05-08T08:00:00+08:00").getTime();
+const weddingDate = new Date("2026-05-08T09:00:00+08:00").getTime();
 let hasStartedMusic = false;
 
 const guestList = {

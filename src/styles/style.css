@@ -28,6 +28,11 @@ body {
   line-height: 1.5;
 }
 
+body.is-locked {
+  height: 100vh;
+  overflow: hidden;
+}
+
 button {
   font: inherit;
 }
@@ -382,6 +387,10 @@ button {
   background: var(--accent);
   box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+body.is-locked .music-button {
+  display: none;
 }
 
 .music-button.is-playing {

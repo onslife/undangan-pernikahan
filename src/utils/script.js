@@ -73,21 +73,13 @@ async function playMusic() {
 }
 
 openInvitationButton.addEventListener("click", async () => {
+  document.body.classList.remove("is-locked");
   invitationContent.scrollIntoView({ behavior: "smooth" });
   await playMusic();
 });
 
 musicButton.addEventListener("click", toggleMusic);
 
-["click", "touchstart", "keydown", "scroll"].forEach((eventName) => {
-  window.addEventListener(eventName, () => {
-    if (!hasStartedMusic) {
-      playMusic();
-    }
-  }, { once: true, passive: true });
-});
-
 setGuestName();
 updateCountdown();
-playMusic();
 setInterval(updateCountdown, 1000);
